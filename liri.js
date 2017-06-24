@@ -48,8 +48,7 @@ if (process.argv[2] === "movie-this") {
     if (i > 3 &&  i < process.argv.length) { 
       movieName += "+" + process.argv[i];
     }
-
-}
+  }
   var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=40e9cece";
   console.log(queryUrl);
   request(queryUrl, function(error, response, body) {
